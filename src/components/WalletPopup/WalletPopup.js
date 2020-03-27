@@ -45,7 +45,7 @@ const WalletPopup = ({ popupIsVisible, toggleWalletPopup, walletInfo }) => {
 
 const Popup = styled.div`
 	z-index: ${Z_INDEX.MODAL};
-	background-color: ${props => props.theme.colors.surfaceL1};
+	background: ${props => props.theme.colors.surfaceL1};
 	position: absolute;
 	display: ${props => (props.isVisible ? 'block' : 'none')};
 	width: 100%;

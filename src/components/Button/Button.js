@@ -11,7 +11,7 @@ const Button = styled.button`
 		opacity: 0.5;
 		cursor: default;
 	}
-	border: none;
+	border: 1px solid #FF8FC5;
 	text-transform: uppercase;
 	white-space: nowrap;
 	cursor: pointer;
@@ -43,16 +43,16 @@ const Button = styled.button`
 		props.palette === 'primary' &&
 		css`
 			color: ${props => props.theme.colors.white};
-			background-color: ${props => props.theme.colors.buttonDefault};
+			background: ${props => props.theme.colors.buttonDefault};
 			&:hover {
 				&:not(:disabled) {
-					background-color: ${props => props.theme.colors.buttonHover};
+					background: ${props => props.theme.colors.buttonHover};
 				}
 			}
 			${props =>
 				props.isActive &&
 				css`
-					background-color: ${props => props.theme.colors.buttonHover};
+					background: ${props => props.theme.colors.buttonHover};
 				`}
 		`}
 
@@ -60,16 +60,16 @@ const Button = styled.button`
 		props.palette === 'secondary' &&
 		css`
 			color: ${props => props.theme.colors.fontTertiary};
-			background-color: ${props => props.theme.colors.accentL1};
+			background: ${props => props.theme.colors.accentL1};
 			&:hover {
 				&:not(:disabled) {
-					background-color: ${props => props.theme.colors.accentL2};
+					background: ${props => props.theme.colors.accentL2};
 				}
 			}
 			${props =>
 				props.isActive &&
 				css`
-					background-color: ${props => props.theme.colors.accentL2};
+					background: ${props => props.theme.colors.accentL2};
 				`}
 		`}
 `;

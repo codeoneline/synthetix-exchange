@@ -180,7 +180,7 @@ const fadeOut = keyframes`
 
 const Popup = styled.div`
 	z-index: ${Z_INDEX.MODAL};
-	background-color: ${props => props.theme.colors.surfaceL1};
+	background: ${props => props.theme.colors.surfaceL1};
 	position: absolute;
 	display: ${props => (props.isVisible ? 'block' : 'none')};
 	animation: ${props => (props.isVisible ? fadeIn : fadeOut)} 0.2s ease-in;
@@ -230,7 +230,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 // const Input = styled.input`
-// 	background-color: ${props => props.theme.colors.surfaceL3};
+// 	background: ${props => props.theme.colors.surfaceL3};
 // 	border: 1px solid ${props => props.theme.colors.accentL2};
 // 	flex: 1;
 // 	font-size: 14px;
@@ -239,7 +239,7 @@ const GlobalStyle = createGlobalStyle`
 // `;
 
 const TooltipInner = styled.div`
-	background-color: ${props => props.theme.colors.surfaceL3};
+	background: ${props => props.theme.colors.surfaceL3};
 	height: 100%;
 	padding: 12px;
 `;

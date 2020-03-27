@@ -66,7 +66,7 @@ export const Dot = styled.div`
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
-	background-color: ${props => props.theme.colors.accentL2};
+	background: ${props => props.theme.colors.accentL2};
 `;
 
 export const FormInputRow = styled.div`
@@ -123,12 +123,12 @@ export const Message = styled(FlexDivCentered)`
 		switch (props.type) {
 			case 'error': {
 				return css`
-					background-color: ${props => props.theme.colors.red};
+					background: ${props => props.theme.colors.red};
 				`;
 			}
 			case 'success': {
 				return css`
-					background-color: ${props => props.theme.colors.green};
+					background: ${props => props.theme.colors.green};
 				`;
 			}
 			default:
@@ -139,7 +139,7 @@ export const Message = styled(FlexDivCentered)`
 export const InfoBox = styled.div`
 	display: grid;
 	grid-row-gap: 10px;
-	background-color: ${props => props.theme.colors.surfaceL3};
+	background: ${props => props.theme.colors.surfaceL3};
 	padding: 13px;
 `;
 
@@ -171,7 +171,7 @@ export const RoundedIcon = styled(FlexDivCentered)`
 	border-radius: 100%;
 	justify-content: center;
 
-	background-color: ${props => props.theme.colors.accentL1};
+	background: ${props => props.theme.colors.accentL1};
 `;
 
 export const TableNoResults = styled.div`

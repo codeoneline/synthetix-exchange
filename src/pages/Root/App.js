@@ -12,34 +12,25 @@ import { getCurrentTheme } from '../../ducks/ui';
 
 import GlobalEventsGate from '../../gates/GlobalEventsGate';
 
-import { isDarkTheme, lightTheme, darkTheme } from '../../styles/theme';
+import { darkTheme } from '../../styles/theme';
 
 import MainLayout from './components/MainLayout';
 import HomeLayout from './components/HomeLayout';
-import ProtectedRoute from './components/ProtectedRoute';
 import WalletPopup from '../../components/WalletPopup';
 import GweiPopup from '../../components/GweiPopup';
 
-import Trade from '../Trade';
-import Loans from '../Loans';
-import Assets from '../Assets';
-import Home from '../Home';
-import Markets from '../Markets';
+import Trade from '../TradeNew';
+import Splash from '../Splash';
 
-import Banner from 'src/components/Banner';
-
-const App = ({ isAppReady, currentTheme }) => {
-	const themeStyle = isDarkTheme(currentTheme) ? darkTheme : lightTheme;
-
+const App = ({ isAppReady }) => {
 	return (
-		<ThemeProvider theme={themeStyle}>
+		<ThemeProvider theme={darkTheme}>
 			<Router history={history}>
 				{isAppReady && (
 					<>
 						<GlobalEventsGate />
 						<WalletPopup />
 						<GweiPopup />
-						<Banner />
 					</>
 				)}
 				<Switch>
@@ -59,38 +50,7 @@ const App = ({ isAppReady, currentTheme }) => {
 							</MainLayout>
 						)}
 					/>
-					<Route
-						path={ROUTES.Loans}
-						render={routeProps => (
-							<MainLayout isAppReady={isAppReady}>
-								<Loans {...routeProps} />
-							</MainLayout>
-						)}
-					/>
-					<ProtectedRoute
-						path={ROUTES.Assets.Home}
-						render={routeProps => (
-							<MainLayout isAppReady={isAppReady}>
-								<Assets {...routeProps} />
-							</MainLayout>
-						)}
-					/>
-					<Route
-						path={ROUTES.Markets}
-						render={routeProps => (
-							<HomeLayout>
-								<Markets {...routeProps} />
-							</HomeLayout>
-						)}
-					/>
-					<Route
-						path={ROUTES.Home}
-						render={routeProps => (
-							<HomeLayout>
-								<Home {...routeProps} />
-							</HomeLayout>
-						)}
-					/>
+					<Route path={ROUTES.Home} component={Splash} />
 				</Switch>
 			</Router>
 		</ThemeProvider>

@@ -77,7 +77,7 @@ const WalletInfo = styled.div`
 `;
 
 const GreenDot = styled(Dot)`
-	background-color: ${props => props.theme.colors.green};
+	background: ${props => props.theme.colors.green};
 `;
 
 const WalletAddress = styled(DataMedium)`
@@ -87,7 +87,7 @@ const WalletAddress = styled(DataMedium)`
 
 const NetworkLabel = styled(DataMedium)`
 	text-transform: uppercase;
-	background-color: ${props => props.theme.colors.accentL1};
+	background: ${props => props.theme.colors.accentL1};
 	color: ${props => props.theme.colors.fontTertiary};
 	border-radius: 25px;
 	font-size: 12px;
